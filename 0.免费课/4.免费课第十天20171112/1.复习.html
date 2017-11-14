@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 数组的方法
+    // pop  push  shift unshift  slice  splice reverse  sort
+    // sort(function(a,b){return a-b})从小到大
+    // concat  克隆   join("+")   indexOf  lastIndexOf   forEach map
+
+    // every  filter  some  reduce
+//    var  ary = [12,6,8];
+//    ary.pop()
+    // indexOf
+    var  ary = [12,3,6,12,6,88];
+    var obj = {};
+    for(var i=0;i<ary.length;i++){
+        var cur = ary[i];
+        if(obj[cur]===12){
+            ary[i] = ary[ary.length-1];
+            ary.length--;
+            i--;
+            continue;
+        }
+        obj[cur] = cur;
+    }
+
+
+
+</script>
+
+</body>
+</html>

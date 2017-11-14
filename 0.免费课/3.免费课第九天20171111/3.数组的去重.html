@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 实现数组去重：去掉数组中相同的项
+//    var ary  = [12,88,99,66,66,12,67,99];
+   // ary[0] ary[1]
+    // indexOf
+//    var newAry = [];
+
+//    for(var i=0;i<ary.length-1;i++){
+//        console.log(ary[i]);
+//        if()
+        // i =0; newAry=[88,99,66,66,12,67,99]
+        // i =1; newAry=[99,66,66,12,67,99]
+        // i =2; newAry=[66,66,12,67,99]
+
+//        newAry = ary.slice(i+1);
+////        console.log(newAry)
+//        var num = newAry.indexOf(ary[i])
+//        console.log(num)
+//        if (num>-1){
+//            // ary
+//            ary.splice(i+num+1,1);
+//        }
+//    }
+//    console.log(ary);
+//    var ary  = [12,88,99,66,66,12,67,99];
+//    var newAry = [];
+    // indexOf
+//    for(var i=0;i<ary.length;i++){
+        // 当每一次放入newAry 之前进行怕判断当前在newAry是否存在过；
+        // i=0 : ary[0]=12; [12]
+        // i=1 : ary[1]=88  [12,88]
+        // i=2 ; ary[2] =99  [12,88,99]
+        // i=3  ary[3]  =66  [12,88,99,66]
+        // i=4  ary[4] = 66   3===-1 [12,88,99,66]
+//        if(newAry.indexOf(ary[i])===-1){
+//            newAry.push(ary[i])
+//        }
+//
+//    }
+//    console.log(newAry);
+//    console.log(ary);
+    // 第二种 ：
+    var ary  = [12,88,99,66,66,12,67];
+//    var obj = {12:12,13:13};
+//    console.log(obj["a"])
+    var obj = {};
+    for(var i=0;i<ary.length;i++){
+        var cur = ary[i];
+        if(obj[cur]===12){
+            //ary.splice(i,1);// 数组塌陷 ： 删除一项之后，数组后面的所有项的索引要进行重新计算，是非常消耗性能的；
+            // 把数组的最后一项替换当前项；
+            ary[i] = ary[ary.length-1];
+            ary.length--;
+            i--;
+            continue;
+        }
+        obj[cur] = cur;
+        // i=0 obj={12:12};
+        // i=1 obj = {12:12,88:88}
+        // i=3 obj = {12:12,88:88,99:99,66:66};
+        // i=4 obj = {}
+    }
+    console.log(ary);
+//    console.log(obj);
+
+</script>
+</body>
+</html>

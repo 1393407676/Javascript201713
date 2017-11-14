@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 在js中，遇到{}、[] 都是开辟一个新的空间地址
+
+    var c = "world"
+    var obj = {name: c, age: 8, aa: 18};
+    var obj1 = {};
+    //obj == obj1;  false；
+    // 定义一个对象
+    // 1.开辟一个空间地址（堆内存） xxxfff000
+    // 2.把对象中的键值对放进这个堆内存中
+    // 3.把这个地址赋值当前的变量；
+
+    // 对象的属性名是字符串
+    // 1.获取属性值
+    // 如果属性名不存在，那么获取结果是undefined；
+    //    console.log(obj.bb);
+    //    console.log(obj["age"]);
+    //2. 新增
+    //    obj.bb = "hello";
+    //    console.log(obj);
+    // 3.修改
+    //    obj.aa = 100;
+    //    console.log(obj);
+    // 有就是修改，没有就是新增
+    // 4.删除
+    delete obj.aa;
+    console.log(obj);
+
+
+</script>
+</body>
+</html>

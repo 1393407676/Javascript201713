@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="tab">
+        <ul id="oUl"></ul>
+    </div>
+    <div id="div1"></div>
+
+    <!---->
+<script>
+    var oTab = document.getElementById("tab");
+    var oUl = document.getElementById("oUl");
+    // DOM节点
+     //             nodeType   nodeName    nodeValue
+    // 元素节点       1          大写标签名    null
+    // 文本节点       3          #text        文本内容
+    // 注释节点       8          #comment      注释内容
+    // document      9          #document      null
+    // 1.parentNode : 父亲节点
+    // 2.previousSibling : 上一个哥哥节点
+    //  previousElementSibling : 上一个哥哥元素节点；（IE678不兼容）
+
+    //console.log(oTab.parentNode)
+    //3.nextSibling : 下一个弟弟节点
+    //   nextElementSibling
+    // 4.childNodes : 获取所有子节点
+    // 5.children : 获取所有元素子节点
+    // 6.firstChild  : 第一个子节点
+    //   firstElementChild
+    //7.lastChild  : 获取最后一个子节点
+    //  lastElementChild
+//    var div1 = document.getElementById("div1");
+//    console.log(div1.previousElementSibling);
+
+
+    // DOM 动态操作节点的方法
+    //1.document.createElement:创建节点
+    //var a = document.createElement("div");
+    // 2.向容器的末尾添加 appendChild
+//    document.body.appendChild(a)
+    // 3.insertBefore
+    //4.replaceChild(new,old)
+    // 5.removeChild  : 删除节点
+    //oTab.removeChild(oUl)
+    // 6.cloneNode : 克隆节点  true  深克隆  false克隆 默认是false；
+    console.log(oTab.cloneNode(true));
+    //document.body.replaceChild(a,oTab)
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    var ary  = [12,7,88,99,100,55,66];
+    var  ary = [12,13,14,15,16,17,18];
+    //
+//    ary.sort(function (a,b) {// 从小到大排序
+//        return a-b;
+//    })
+//    console.log(ary);
+    // 冒泡排序的原理： 让相邻的两项的进行排序，如果前面一项大于后面一项的话，让这两个交换位置  （从小到大）
+   // 循环完成之后，把数组的最大项放在数组的最后面；
+    for(var i=0;i<ary.length-1;i++){
+        // 当i=0时，把数组的最大值放在数组的最后面
+        // 当i=1时，把数组的第二大值放在数组的倒数第二个位置上
+        // 当i=2时，
+        var flag = false;
+        for(var j=0;j<ary.length-1-i;j++){
+//            j=ary.length-1
+//            console.log(1);
+            if(ary[j]>ary[j+1]){// 顺序已经排好
+                var temp = ary[j];
+                ary[j] = ary[j+1];
+                ary[j+1] = temp;
+                flag = true;
+            }
+        }
+        if(!flag){
+            break;
+        }
+    }
+
+
+    console.log(ary);
+
+</script>
+</body>
+</html>

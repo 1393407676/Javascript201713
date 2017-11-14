@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 插入排序；
+    var ary  = [12,7,88,99,100,55,66];
+    var newAry= [];
+    newAry.push(ary[0]);
+//    console.log(newAry);// [12];
+    for(var i=1;i<ary.length;i++){
+        var cur = ary[i];
+        for(var j=newAry.length-1;j>=0;){
+            if(cur<newAry[j]){
+                j--;
+                if(j===-1){
+                    newAry.unshift(cur);
+                }
+            }else{
+                newAry.splice(j+1,0,cur);
+                break;
+            }
+        }
+    };
+//    console.log(newAry);
+
+
+</script>
+</body>
+</html>

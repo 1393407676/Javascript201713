@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // js定时器两种 setTimeout  setInterval
+    //setTimeout(): 当到达指定时间，代码执行一次
+    // setInterval : 每隔一秒执行一次
+//    setTimeout(function () {
+//        console.log(1)
+//    },3000)
+    // 定时器是有返回值，代表当前在这个页面中是第几个定时器
+    var a = setInterval(function () {
+        console.log(2)
+    },1000);
+    var b =  setTimeout(function () {
+        clearInterval(a)
+    },10000)
+//    console.log(a);
+//    console.log(b);
+    // 清除定时器  clearInterval  clearTimeout
+//    clearInterval(a)
+//    clearTimeout(b)
+
+
+
+
+</script>
+</body>
+</html>

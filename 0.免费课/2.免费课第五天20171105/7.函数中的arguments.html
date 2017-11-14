@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+//    function sum() {
+        // arguments 是对象数据类型，是一个类数组；是函数天生自带的参数集合，集合的第一项是实参传进来的第一个参数...
+        // arguments 和形参没有任何的关系，只和实参有关系；
+        //console.log(typeof arguments)// "object"
+//        console.log(arguments);
+//        console.log(arguments.callee)// 输出当前的整个函数；
+//    }
+
+//    sum(14,8,9)
+    // 任意数求和
+
+//    var ary = [12,3,4,5,6]
+    function sum() {
+//        console.log(arguments);
+        // 在for循环外面定义变量total；
+        var total =0;
+        for(var i=0;i<arguments.length;i++){
+            //console.log(arguments)//[12, 2, 4, "34", 7, "12px", 100]
+            // 通过索引去获取当前的每一项，然后和total相加
+            // 当i=0;
+            var cur = Number(arguments[i]);
+           // 当cur是NaN的时候，不需要加上这个NaN
+            if(!isNaN(cur)){
+                // 当不是NaN的时候，进到这个条件语句中；
+                total +=cur;
+            }
+        }
+        console.log(total)
+    }
+    sum(12, 2, 4, "34", 7, "12px", 100)
+
+
+</script>
+</body>
+</html>

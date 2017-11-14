@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #tab {
+            width: 400px;
+            height: 300px;
+            margin: 20px auto;
+        }
+
+        ul {
+            list-style: none;
+            overflow: hidden;
+        }
+
+        ul li {
+            float: left;
+            width: 80px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border: 1px solid indianred;
+        }
+
+        ul li.select {
+            background: indianred;
+            color: white;
+        }
+
+        #tab div {
+            display: none;
+            width: 100%;
+            height: 300px;
+            border: 1px solid lightblue;
+            text-align: center;
+            line-height: 300px;
+        }
+
+        #tab div.select {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div id="tab">
+    <ul>
+        <li class="select">A模块</li>
+        <li>B模块</li>
+        <li>C模块</li>
+    </ul>
+    <div class="select">HTML\css</div>
+    <div>Javascript</div>
+    <div>框架Node</div>
+</div>
+
+<script>
+    // 选项卡实现的原理： 通过控制li 和div的类名，控制显示隐藏；点击第二个li,让第二个div新增class是select；
+    // 1.要操作谁，就要先获取谁；
+    // 上下文:限制获取范围
+    var oTab = document.getElementById("tab");
+    var oLis = document.getElementsByTagName("li");
+    var oDivs = oTab.getElementsByTagName("div");
+    console.log(oLis);//[li.select, li, li] 是一个类数组集合
+    //    oLis[0].onclick = function () {
+    //
+    //    }
+    //    oLis[1].onclick = function () {
+    //
+    //    }
+    //    oLis[2].onclick = function () {
+    //
+    //    }
+    for (var i = 0; i < oLis.length; i++) {
+        // oLis[0].index = 0
+        // oLis[1].index = 1
+        // oLis[2].index = 2;
+
+        oLis[i].index = i;
+        oLis[i].onclick = function () {
+            // 当点击li的时候执行;当点击时，for循环已经循环完成，i已经变成最后一个值
+//            console.log(i)// 3
+            //  点击让所有li和div的class清空；
+            for (var j = 0; j < oLis.length; j++) {
+                // 在js中的className ,和元素标签上的class是绑在一起的；
+                oLis[j].className = "";
+                oDivs[j].className = "";
+            }
+//            console.log(this.index);
+            // 添加class
+            oLis[this.index].className = "select";
+            oDivs[this.index].className = "select";
+
+        }
+    }
+
+
+</script>
+</body>
+</html>

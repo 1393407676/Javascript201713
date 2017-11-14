@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 1.数据类型  操作语句   函数
+    // 1
+//    var  a = b =c = 1;
+//    c =3;
+//    var a=b=c =[1,2,3,4];
+//    c[0] = 0;
+//    c = [100];
+//    console.log(a);// [0,2,3,4]
+//    console.log(c);// [100]
+    // 1.number : parseInt  parseFloat Number  isNaN  toFixed
+
+//   parseInt("12.5px12")
+//    parseFloat("12.5px12")
+//    parseFloat([])// NaN
+//    Number([])// 0
+//    var  num = 12.45;
+//    num.toFixed(1)  //"12.5"
+
+    // 2.string
+//    var  str = "十三期";
+//    console.log(str.length);
+//    12+null
+   // "3px"+3?console.log('ok'):console.log("no");
+
+    //3.布尔 true->1 false->0
+    // 只有0 ""  NaN  null  undefined  转换布尔是false;
+    // !
+    //![] == false;  true   [] == true  -->false  [] == []  "" == ""
+   // ==  ===
+    //[] == [] -->false
+//    var  a = b = [];
+//    console.log(a == b);// true
+    //1 === "1"
+    //4.null      undefined
+    //null == undefined
+
+    // 函数 ：定义和执行
+    function fn(){
+
+    }
+    // 函数的定义；
+    // 1.首先开辟一个空间地址
+    // 2.把函数体中代码以字符串存储到这个堆内存中
+    // 3.把这个空间地址赋值给函数名
+
+//    var fn =1;
+    //fn is not defined : fn 没有被定义
+//    fn() //
+    //fn is not a function : fn 不是一个函数；
+
+//    fn()
+    // 函数执行：
+    // 1.形成一个私有作用域
+    // 2.形参赋值
+    // 3.预解释
+    // 4.代码从上到下执行；
+
+    // 形参和实参
+    var num =10;
+    function fn(num,num1,num2,num3) {// 函数的形参
+        console.log(num)//10
+        console.log(arguments)
+        num ++;
+        return num;
+    }
+    fn(num);
+//    console.log(num);// 11
+//    console.log(num1); // num1 is not defined
+
+      // arguments  :天生自带的参数集合，和实参有关；
+    function sum() {
+        var total = 0;
+        console.log(arguments)
+        for(var i=0;i<arguments.length;i++){
+            var cur = Number(arguments[i]);
+            if(!isNaN(cur)){
+                total +=cur;
+            }
+        };
+        return total;
+    }
+    sum(12,100,88,"19","13px","55");
+
+    // 函数的return: 1.把函数体中内容返回，2.结束当前函数；
+//    function fn() {
+//
+//        return 12;
+//
+//    }
+//    console.log(fn());
+
+    // 匿名函数
+//    var f  = function () {
+//
+//    };
+//    f()
+//    (function () {
+    //
+    //    })()
+
+    //三个判断  if else  三元运算符   switch  case (绝对比较)
+    // 三个循环  for循环  continue 和 break    for in(遍历对象)  while
+//    if(0){
+//
+//    }else{
+//
+//    }
+//    var obj = {}
+//    for(var key in obj){
+//        console.log(obj[key])
+//    }
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 1.for
+    // 2.for in 循环;一般用于循环对象,对象有多少键值对，那么就循环多少次
+    var obj = {hello: "world", date: "11/5", 1: 12};// week:sunday
+    //    obj.week = "sunday";
+    //    obj.hello
+    //    obj.1
+    // 当对象属性名是数字的情况下，先要输出当前的属性值
+    for (var key in obj) {
+        // key 代表当前的对象的属性名
+    //        console.log(key);
+        console.log(obj[key])
+        //console.log(obj.key)// 这种写法在for in循环是不允许的
+    }
+
+    // 3.while 循环 , 不知道循环多少次
+
+    var num = 0;
+    while (num) {// 判断条件
+        console.log(num)
+        num++;
+    }
+
+
+</script>
+</body>
+</html>

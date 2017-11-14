@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var ary =[12,88,99,55,66,33,22];
+    var ary1 = [100,288,99,88,20]
+    // 数组快速排序的原理 ： 获取数组的中间项，然后对数组进行循环，判断数组每一项和这个中间项进行比较，比中间项小的放在左边数组，比中间项大的放进右边的数组；然后通过递归对左边数组右边数组进行同样的处理，最后把每一个数组和中间项拼接在一起；
+    function quickSort(ary) {
+        // 当数组长度为一时，不需要再递归
+        if(ary.length<=1){
+            return ary;
+        }
+        // 计算中间项的索引，偶数项取中间两项后面一项，奇数项取中间项
+        var index = Math.floor(ary.length/2);
+        // splice  : 返回值是一个数组，通姑索引获取中间项
+        var middle = ary.splice(index,1)[0];
+        console.log(middle);
+        var  left = [];
+        var  right = [];
+        for(var i=0;i<ary.length;i++){
+            var cur = ary[i];
+            if(cur<middle){
+                left.push(cur);
+            }else{
+                right.push(cur);
+            }
+        }
+        return quickSort(left).concat(middle,quickSort(right));
+    }
+    quickSort(ary);
+    quickSort(ary1);
+
+</script>
+</body>
+</html>

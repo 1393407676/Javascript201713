@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var a = 12;
+    // 1. typeof  : 检测数据类型，返回一个字符串，里面的内容是代表当前这个 变量的具体的数据类型
+    console.log(typeof 12); // "number"
+    console.log(typeof "12px");// "string"
+    console.log(typeof true);// "boolean"
+    console.log(typeof undefined);//"undefined"
+    console.log(typeof null); // "object"
+
+    // 对象数据类型的 都返回"object"
+    // 局限性： 不能具体细分对象数据类型中的具体的数据类型
+    console.log(typeof {});
+    console.log(typeof []);
+    console.log(typeof /^$/)
+    function fn() {}
+    console.log(typeof fn); // "function"
+
+    // 2.instanceof
+    // 3.constructor
+    // 4.Object.prototype.toString.call()
+
+
+</script>
+</body>
+</html>

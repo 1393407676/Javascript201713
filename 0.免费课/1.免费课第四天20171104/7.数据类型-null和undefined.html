@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="box" class="tab"></div>
+<script>
+    // null   : 表示没有 ，空对象指针
+    var obj = {};
+
+    obj = null;
+    //null
+    // 1. 清空当前变量所存储堆内存的地址；
+    //    var  oBox = document.getElementById("boxx");
+    //    console.log(oBox);// null
+    // 2.如果通过id获取元素，如果获取不到，那么获取结果是null；
+    // 3. 正则捕获，如果捕获不到内容，捕获结果也是null；
+
+
+    // undefined : 未定义
+    // 1.如果变量只声明，未定义，那么默认值就是undefined；
+    // 2.如果获取对象的属性名对象的属性值，如果这个属性名不存在，那么获取结果也是undefined
+    // 3.函数有形参没有实参，那么形参默认存储的值是undefined
+    // 4.函数如果没有return，那么默认返回值是undefined；
+
+    //    var a;
+    //    console.log(a);
+//    var obj = {class: 13};
+//    console.log(obj.data);
+
+    // 类数组集合
+    var tab = document.getElementsByClassName("tab1")[0];
+    console.log(tab);
+
+
+</script>
+</body>
+</html>

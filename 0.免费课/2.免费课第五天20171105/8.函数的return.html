@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 函数的return ： 函数的出口；
+    // return 后面的内容就是函数的返回值；
+    // 如果函数没有return，那么函数默认的返回值就是undefined；
+
+    // 在函数体中，遇到return，那么return下面的代码都不再执行了；
+    var b = "珠峰";
+    // 在全局下定义的变量是全局变量
+    function fn(num1,num2) {
+        // 函数体中定义的变量是私有变量，只有在函数体中可以访问；
+        var total = num1+num2;
+
+        return total;
+    };
+    console.log(fn(100,200))
+//    console.log(a)
+    //console.log(total)// total is not defined
+    // 在函数执行时，会形成一个私有作用域，保护里面的私有变量不受外界的干扰，这种保护的机制--> "闭包"
+
+
+
+
+</script>
+</body>
+</html>

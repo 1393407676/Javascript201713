@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // a is not a function: a不是一个函数
+    //    var a = 19;
+    //    a();
+//    var a ='nihao'
+//    var ary = [12,37,99,88];
+    // 数组的方法 ：function
+    // 1. pop  : 删除数组的最后一项
+//    ary.pop();
+//    console.log(ary);
+    // 2.push : 往数组的最后新增一项
+//    ary.push(100,200)
+//    console.log(ary.push(100,200))
+//    ary[ary.length] =100;
+    // 3.shift() : 删除数组的第一项
+//    ary.shift()
+//    console.log(ary.shift());
+    // 4.unshift: 在数组的开头新增一项
+//    console.log(ary.unshift(10));
+//    console.log(ary);
+//    var ary = [12,37,99,88,100];
+    // 5.slice(m,n): 从索引m开始，截取到索引n,不包含索引n
+//    console.log(ary.slice(-12,5));
+//    console.log(ary);
+    // 6.splice(m,n) :
+//    console.log(ary.splice(2,2,199));
+    //    console.log(ary);
+    //7.reverse
+//    console.log(ary.reverse());
+//    console.log(ary);
+    // 8.sort : 排序
+//    var ary = [1,777,3,88,5,9]
+//    console.log(ary.sort(function (a, b) {
+//        return b - a;
+//    }));;
+//
+//    console.log(ary);
+    // 9.join
+    var ary = [12,99,37,99,88,100];
+//    console.log(ary.join("+"));
+//    console.log(ary);
+    // 10.concat :
+//    console.log(ary.concat([0,23]));
+//    console.log(ary);
+    // 11.indexOf :
+//    console.log(ary.indexOf(199));
+//    console.log(ary);
+    // 13.forEach: 遍历数组
+    var a =ary.forEach(function (item,index) {
+        //console.log(item)// 数组的每一项
+//        console.log(index)
+        return 5;
+    })
+    // 14.map : 遍历数组
+    var b =ary.map(function (p1, p2, p3) {
+//        console.log(p1)
+//        console.log(p2);
+        return 2
+    });
+    console.log(a);
+    console.log(b);
+
+</script>
+</body>
+</html>
